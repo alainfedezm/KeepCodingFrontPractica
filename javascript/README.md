@@ -256,8 +256,12 @@ const expected = {
 
 // add you solution here
 
-let map = input.orders.map((item) => item.price).reduce((j, i) => j + i, 0);
-input.totalPrice = map;
-console.log(input);
+const sum = input.orders.map((item) => item.price).reduce((j, i) => j + i, 0);
+input.totalPrice = sum;
+const newInput = {
+  totalPrice: sum,
+  ...input
+};
+console.log(newInput);
 ```
 
