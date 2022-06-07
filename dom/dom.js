@@ -15,17 +15,32 @@ const getApi = async () => {
     }
 };
 
+const template = document.querySelector('#article');
+
+const pintarRender = (article, item) =>{
+  const clone = template.content.cloneNode(true);
+  (clone.querySelector('img')).src = item.image;
+  console.log(item.image)
+  article.appendChild(clone)
+}
+
+const renderData = (article, items) => {
+  items.forEach((item) => {
+      pintarRender(article,item)
+  })
+}
 
 document.getElementById('button').addEventListener('click', (event) => {
-    alert("datos mostrados por consola")
     const data = getApi();
     data.then(array => {
         array.forEach((item) => {
-            console.log(item.name + " ---- " + item.image);
+            //console.log(item.name + " ---- " + item.image);
+            
         })
+        renderData(document.getElementById('show-items'),array);
       })
+    
   })
-
 
 
    

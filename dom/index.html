@@ -3,12 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <title>My basic app</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Ejercicio DOM</h1>
     <hr> 
-    <button id="button">Click me</button>
-    <!--Navegación inetna por la pagina-->
+    <button id="button">Check teams</button>
+    <section class="shows-container">
+        <section class="show-items" id="show-items"></section>
+    </section>
+    
+
+    <!--Template Football-->
+    <template id="article">
+        <article class="show-item">
+            <figure>
+                <div class="img-container">
+                    <img src="img" alt="team">
+                </div>
+            </figure>
+        </article>
+    </template>
+
     <script type="text/javascript" src="./dom.js"></script>
 
 </body>

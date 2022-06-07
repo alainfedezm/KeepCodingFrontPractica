@@ -1,0 +1,27 @@
+
+.shows-container .show-items {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1em;
+    justify-items: center;
+    align-items: center;
+    
+    
+}
+
+.show-item{
+    width: 70%;
+    
+}
+
+.show-item .image-container {
+	margin-bottom: 10px;
+	max-height: 192px;
+	overflow: hidden;
+    width: 100%;
+
+}
+
+img {
+	width: 100%;
+}
