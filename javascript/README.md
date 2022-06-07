@@ -182,7 +182,7 @@ const input = {
 // add you solution here
 
 const filter = input.orders.filter((item) => item.price > 10);
-let result = filter.map((item) => item.productId).join(",");
+const result = filter.map((item) => item.productId).join(", ");
 console.log(result);
 
 
@@ -224,9 +224,8 @@ const input = {
 
 // add you solution here
 
-let map = input.orders.map((item) => item.price);
-const sum = map.reduce((prev, i) => prev + i, 0);
-input.totalPrice = sum;
+let map = input.orders.map((item) => item.price).reduce((j, i) => j + i, 0);
+input.totalPrice = map;
 console.log(input);
 
 const expected = {
