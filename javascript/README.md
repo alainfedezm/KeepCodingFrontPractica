@@ -65,7 +65,7 @@ const input = {
   },
 };
 
-// add you solution here
+
 
 const expected = [{
   productId: 'product-1-nl',
@@ -77,12 +77,13 @@ const expected = [{
   productId: 'product-3-en',
 }]
 
+
+// add you solution here
 const result2 = input.orders.map(elem => (
   {
     productId: elem.productId + "-" + elem.storeLocale,
   } 
 ));
-
 console.log(result2);
 ```
 
@@ -118,11 +119,6 @@ const input = {
   },
 };
 
-// add you solution here
-
-input.orders = input.orders.filter((item) => item.price > 10);
-console.log(input);
-
 const expected = {
   name: 'test account',
   firstName: 'test',
@@ -144,7 +140,14 @@ const expected = {
     },
   },
 };
+
+
+// add you solution here
+input.orders = input.orders.filter((item) => item.price > 10);
+console.log(input);
+
 ```
+
 
 
 ## Exercise 4. map & filter
