@@ -257,7 +257,6 @@ const expected = {
 // add you solution here
 
 const sum = input.orders.map((item) => item.price).reduce((j, i) => j + i, 0);
-input.totalPrice = sum;
 const newInput = {
   totalPrice: sum,
   ...input
