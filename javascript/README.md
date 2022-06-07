@@ -82,11 +82,9 @@ const expected = [{
 
 // add you solution here
 
-const result2 = input.orders.map(elem => (
-  {
-    productId: elem.productId + "-" + elem.storeLocale,
-  } 
-));
+const result2 = input.orders.map((elem) => ({
+  productId: elem.productId + "-" + elem.storeLocale
+}));
 console.log(result2);
 ```
 
